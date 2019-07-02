@@ -7,12 +7,12 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class Sender {
+public class SimpleChatSender {
 
 private boolean isRunning = true;
 private volatile List<String> msgs;
 
-public Sender(String username, String targetIP, int targetPort) throws InterruptedException, UnknownHostException, IOException {
+public SimpleChatSender(String username, String targetIP, int targetPort) throws InterruptedException, UnknownHostException, IOException {
     msgs = Collections.synchronizedList(new ArrayList<String>());
 
     Runnable senderT = new Runnable() {

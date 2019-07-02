@@ -3,11 +3,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class SimpleChat {
+public class SimpleChatMain {
 
 private static boolean isRunning = true;
-private static Sender sender;
-private static Receiver receiver;
+private static SimpleChatSender sender;
+private static SimpleChatReceiver receiver;
 
 public static void main(String[] args) throws IOException {
 
@@ -16,8 +16,8 @@ public static void main(String[] args) throws IOException {
     }
 
     try {
-        receiver = new Receiver(Integer.parseInt(args[1]));
-        sender = new Sender(args[0], args[2], Integer.parseInt(args[3]));
+        receiver = new SimpleChatReceiver(Integer.parseInt(args[1]));
+        sender = new SimpleChatSender(args[0], args[2], Integer.parseInt(args[3]));
     } catch (InterruptedException e) {
         showUsage();
     }

@@ -4,11 +4,11 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Receiver {
+public class SimpleChatReceiver {
 
 private boolean isRunning = true;
 
-public Receiver(int listeningPort) throws IOException {
+public SimpleChatReceiver(int listeningPort) throws IOException {
 
     Runnable receiverT = new Runnable() {
         public void run() {
